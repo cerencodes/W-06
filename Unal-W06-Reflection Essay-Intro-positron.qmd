@@ -13,7 +13,7 @@ format:
     code-link: true
     embed-resources: true
     smooth-scroll: true
-    df-print: kable
+    df-print: kab`le
     code-tools: true
     code-overflow: wrap 
     code-block-bg: true
@@ -94,3 +94,5 @@ execute:
 # Link
 
 > Publish this report to GitHub Pages and provide a URL to the GitHub Pages for the report. Note that although both GitHub Pages and GitHub repo are online, they are different. GitHub Pages is a website publishing service that hosts the rendered HTML from a QMD file.
+
+<https://cerencodes.github.io/W-06/>
