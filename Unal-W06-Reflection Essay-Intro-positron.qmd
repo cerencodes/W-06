@@ -1,5 +1,5 @@
 ---
-title: "M07-Labelled-Data"
+title: "W06-Reflection Essay-Intro-positron"
 author: Ceren Unal
 date: '`r format(Sys.time())`'
 format: 
@@ -25,7 +25,7 @@ execute:
   warning: false
 ---
 
-## **Essay 1**
+# **Essay 1**
 
 > Based on what you learned from Step 1 and Step 3, what do you like about Positron compared with RStudio?
 
@@ -33,7 +33,7 @@ execute:
 -   The second video provides a more detailed look into the interface and show how to manage Python versions and virtual environments. It mentions that Positron Assistant can help look at your data and plots, and provide suggestions for your data science workflows and can assist with code writing and debugging. It can also analyze and interpret plots, which I think is a great capability.
 -   Overall, I think the best part is that it can integrate an AI assistant directly into the interface where it can read the context. I have been using OpenAI's Codex via the terminal for coding in RStudio, but since it couldn't run and read the output directly, I had to copy paste my results, errors etc into ChatGPT to get further help.
 
-## **Essay 2**
+# **Essay 2**
 
 > In Step 4, the video demonstrates how you can use AI. 
 >
@@ -69,11 +69,11 @@ execute:
 >
 > Apply for it and take a screenshot showing you were accepted into the education program. 
 
-![](images/paste-1.png)
+![](Screenshot%202026-03-08%20200906.png)
 
 > Play with it and do you find it helpful or distracting? Please elaborate.
 
--   
+-   It was successful in creating the below visualization with a very simple prompt "Create a data visualization from mtcars dataset". I like that it offers different options that allow you to run in console first, copy-paste manually or allow it insert itself. However, I wasn't able to get it to insert the code into the code chunk in the Quarto document. It doesn't see where my cursor is and insert the code block.
 
     ```{r}
     # Load ggplot2 (assumes package is installed)
@@ -91,4 +91,6 @@ execute:
       theme_minimal()
     ```
 
-Publish this report to GitHub Pages and provide a URL to the GitHub Pages for the report. Note that although both GitHub Pages and GitHub repo are online, they are different. GitHub Pages is a website publishing service that hosts the rendered HTML from a QMD file.
+# Link
+
+> Publish this report to GitHub Pages and provide a URL to the GitHub Pages for the report. Note that although both GitHub Pages and GitHub repo are online, they are different. GitHub Pages is a website publishing service that hosts the rendered HTML from a QMD file.
