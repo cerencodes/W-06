@@ -1,0 +1,94 @@
+---
+title: "M07-Labelled-Data"
+author: Ceren Unal
+date: '`r format(Sys.time())`'
+format: 
+  html: 
+    theme: lumen 
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-line-numbers: true
+    code-fold: false
+    code-link: true
+    embed-resources: true
+    smooth-scroll: true
+    df-print: kable
+    code-tools: true
+    code-overflow: wrap 
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    highlight-style: pygments
+editor: visual
+execute: 
+  freeze: auto
+  warning: false
+---
+
+## **Essay 1**
+
+> Based on what you learned from Step 1 and Step 3, what do you like about Positron compared with RStudio?
+
+-   I haven't used VS Code very much but the first video mentions that there is no need for customization when using Positron but it offers the same level of speed and flexibility, along with integrations with AI assistants.
+-   The second video provides a more detailed look into the interface and show how to manage Python versions and virtual environments. It mentions that Positron Assistant can help look at your data and plots, and provide suggestions for your data science workflows and can assist with code writing and debugging. It can also analyze and interpret plots, which I think is a great capability.
+-   Overall, I think the best part is that it can integrate an AI assistant directly into the interface where it can read the context. I have been using OpenAI's Codex via the terminal for coding in RStudio, but since it couldn't run and read the output directly, I had to copy paste my results, errors etc into ChatGPT to get further help.
+
+## **Essay 2**
+
+> In Step 4, the video demonstrates how you can use AI. 
+>
+> Describe the various ways you can use AI inside Positron. Some are free while others are not. 
+
+-   Positron Assistant and Databot both work with a "bring your own model" business model, meaning the user would be responsible for the costs associated with the underlying large language model. GitHub Copilot is a paid service.
+
+-   Positron Assistant is designed for data science, having context awareness of the user's environment, such as open scripts, variables in memory, plots, tables, and code output. This eliminates the need to copy and paste code or error messages for useful suggestions. Suggestions are code-based, allowing users to review and approve the code before it's run.
+
+    -   It can suggest improvements to existing code, such as labeling outliers in a plot.
+
+    -   It can generate code for new components, such as creating a colorful `gt` table from scratch based on a description.
+
+    -   Users can interact with the assistant for inline code suggestions by placing the cursor in a document and using a keyboard shortcut.
+
+-   Databot is specifically designed to perform exploratory data analysis quickly. It operates with a "WEAR loop" methodology, where it **W**rites R code, **E**xecutes it, **A**nalyzes the results, and then **R**egroups with suggestions for the next steps, iterating until the user is satisfied.
+
+    -   Like Positron Assistant, Databot provides code-based suggestions, which are auditable and allow the user to approve the code before execution.
+
+    -   It can combine multiple data files into a single dataset and then explore.It can identify and attempt to resolve inconsistencies in data formats when combining.
+
+    -   It can create visualizations to explore trends and patterns. Furthermore, after analysis, Databot provides a summary of key findings from the data and typically offers suggestions for further data exploration.
+
+    -   Users can generate a Quarto document summarizing Databot's findings using slash commands (`/report`).
+
+    -   Databot can integrate external information from the internet, if the underlying model is trained on it to provide additional context and insights.
+
+> Which AI tools have you installed or set up? Which AI tools did you find beneficial for you?
+
+-   I connected GitHub Copilot, as I don't want to incur cost through API usage, and Databot.
+
+> I strongly recommend using GitHub Copilot, which is free if you apply for an education account.
+>
+> Apply for it and take a screenshot showing you were accepted into the education program. 
+
+![](images/paste-1.png)
+
+> Play with it and do you find it helpful or distracting? Please elaborate.
+
+-   
+
+    ```{r}
+    # Load ggplot2 (assumes package is installed)
+    library(ggplot2)
+
+    # Scatter: mpg vs weight, color by cyl (as factor)
+    ggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+      geom_point(size = 3, alpha = 0.8) +
+      labs(
+        title = "Fuel economy vs. vehicle weight",
+        x = "Weight (1000 lbs)",
+        y = "Miles per gallon",
+        color = "Cylinders"
+      ) +
+      theme_minimal()
+    ```
+
+Publish this report to GitHub Pages and provide a URL to the GitHub Pages for the report. Note that although both GitHub Pages and GitHub repo are online, they are different. GitHub Pages is a website publishing service that hosts the rendered HTML from a QMD file.
